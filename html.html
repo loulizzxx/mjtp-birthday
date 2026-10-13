@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#d9edda"
+    >
+
+    <title>Ad Astra Abyssosque! </title>
+
+    <!-- WEBSITE DESIGN -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================
+         LOADING SCREEN — 8 SECONDS
+    ======================================= -->
+
+    <div
+        id="loadingScreen"
+        class="loading-screen"
+        aria-label="Loading your birthday surprise"
+    >
+
+        <!-- Replace loading-video.mp4 with your video filename -->
+        <video
+            id="loadingVideo"
+            class="loading-video"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+        >
+            <source
+                src="FURINA.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support video playback.
+        </video>
+
+        <h1 class="loading-title">
+            ✦ Paimon seems to be excited...✦
+        </h1>
+
+        <p class="loading-subtitle">
+            Preparing something special for you...
+        </p>
+
+        <div
+            id="loadingTrack"
+            class="loading-track"
+            role="progressbar"
+            aria-label="Loading progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+        >
+            <div
+                id="loadingProgress"
+                class="loading-progress"
+            ></div>
+        </div>
+
+        <p
+            id="loadingPercent"
+            class="loading-percent"
+            aria-live="off"
+        >
+            0%
+        </p>
+
+    </div>
+
+
+    <!-- ======================================
+         MAIN WEBSITE
+    ======================================= -->
+
+    <main id="mainContent">
+
+        <section
+            id="giftSection"
+            class="gift-section"
+        >
+
+            <!-- INTRODUCTION -->
+
+            <h1 class="gift-heading">
+                Happy birthday, Traveler!
+            </h1>
+
+            <p class="gift-instructions">
+                Something from all the travels you have made.
+            </p>
+
+
+            <!-- ==================================
+                 ANIMATED GIFT BOX
+            =================================== -->
+
+            <div
+                id="giftBox"
+                class="gift-box"
+                role="button"
+                tabindex="0"
+                aria-label="Open your birthday gift"
+                aria-expanded="false"
+            >
+
+                <!-- Gift lid -->
+
+                <div class="gift-lid"></div>
+
+                <!-- Gift bow -->
+
+                <div class="gift-bow"></div>
+
+                <!-- Gift body -->
+
+                <div class="gift-body">
+
+                    <div class="gift-ribbon-vertical"></div>
+
+                    <div class="gift-ribbon-horizontal"></div>
+
+                </div>
+
+            </div>
+
+
+            <p class="gift-instructions">
+                Click the gift to open it! ✧
+            </p>
+
+
+            <!-- ==================================
+                 FOUR LETTER SCROLLS
+            =================================== -->
+
+            <div
+                class="letters-container"
+                id="lettersContainer"
+                hidden
+            >
+
+                <!-- A — RED -->
+
+                <div
+                    class="letter-scroll scroll-a"
+                    data-letter="a"
+                >
+
+                    <div class="scroll-roll"></div>
+
+                    <div class="scroll-paper">
+                        A
+                    </div>
+
+                    <div class="scroll-roll"></div>
+
+                </div>
+
+
+                <!-- B — GREEN -->
+
+                <div
+                    class="letter-scroll scroll-b"
+                    data-letter="b"
+                >
+
+                    <div class="scroll-roll"></div>
+
+                    <div class="scroll-paper">
+                        B
+                    </div>
+
+                    <div class="scroll-roll"></div>
+
+                </div>
+
+
+                <!-- C — BLUE -->
+
+                <div
+                    class="letter-scroll scroll-c"
+                    data-letter="c"
+                >
+
+                    <div class="scroll-roll"></div>
+
+                    <div class="scroll-paper">
+                        C
+                    </div>
+
+                    <div class="scroll-roll"></div>
+
+                </div>
+
+
+                <!-- D — RED -->
+
+                <div
+                    class="letter-scroll scroll-d"
+                    data-letter="d"
+                >
+
+                    <div class="scroll-roll"></div>
+
+                    <div class="scroll-paper">
+                        D
+                    </div>
+
+                    <div class="scroll-roll"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 LITTLE MESSAGE
+            =================================== -->
+
+            <div class="gift-message">
+
+                <h2>
+                    ✦ Ad Astra Abyssosque! ✦
+                </h2>
+
+                <p>
+                    Fontaine — The Nation of Justice.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             FANCY LETTER POPUP
+        ======================================= -->
+
+        <div
+            class="letter-overlay"
+            id="letterOverlay"
+            aria-hidden="true"
+        >
+
+            <div
+                class="fancy-letter"
+                id="fancyLetter"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="letterTitle"
+            >
+
+                <!-- CLOSE BUTTON -->
+
+                <button
+                    class="close-letter"
+                    id="closeLetter"
+                    type="button"
+                    aria-label="Close letter"
+                >
+                    ×
+                </button>
+
+
+                <!-- TOP DECORATION -->
+
+                <div class="letter-decoration top-decoration">
+                    ✦ ❦ ✦
+                </div>
+
+
+                <!-- GREETING -->
+
+                <h2 id="letterTitle">
+                    Dear Miguel,
+                </h2>
+
+
+                <!-- DIVIDER -->
+
+                <div class="letter-line"></div>
+
+
+                <!-- PERSONAL MESSAGE -->
+
+                <p id="letterText"></p>
+
+
+                <!-- BOTTOM DECORATION -->
+
+                <div class="letter-decoration bottom-decoration">
+                    ❦
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
